@@ -6,12 +6,6 @@ export interface SectionContent {
   highlight?: boolean;
 }
 
-export interface RankDetails {
-  title: string;
-  requirements: string[];
-  rewards: string[];
-}
-
 export interface NavItem {
   label: string;
   id: string;

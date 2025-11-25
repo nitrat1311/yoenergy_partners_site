@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
-  Flame, Leaf, Heart, Gem, XCircle, CheckCircle, 
-  Target, TrendingUp, Users, ShieldCheck, DollarSign, 
+  Flame, Leaf, Heart, Gem, XCircle, CheckCircle,
+  TrendingUp, Users, ShieldCheck, DollarSign,
   Star, Crown, Sparkles, Activity
 } from 'lucide-react';
 import Hero from './components/Hero';
@@ -291,75 +291,6 @@ function App() {
                  </div>
               </div>
             </div>
-        </div>
-      </section>
-
-      {/* Ranks & Levels */}
-      <section className="py-20 container mx-auto px-6">
-        <div className="text-center mb-12">
-           <Star className="w-12 h-12 text-brand-gold mx-auto mb-4" />
-           <h2 className="text-3xl font-bold gold-gradient-text uppercase tracking-widest">Ранги и уровни партнёров</h2>
-           <p className="mt-4 text-brand-cream/60">Честная, прозрачная, мотивирующая система прогресса.</p>
-           <p className="text-sm mt-2 text-brand-cream/40">Каждый уровень подтверждается ежемесячно.</p>
-        </div>
-
-        <div className="space-y-8 max-w-4xl mx-auto">
-          {C.RANKS.map((rank, idx) => (
-            <div key={idx} className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-gold/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative p-6 border border-brand-cream/10 rounded-xl bg-brand-dark hover:border-brand-gold/50 transition-colors">
-                 <h3 className="text-xl font-bold text-brand-gold mb-6">{rank.title}</h3>
-                 <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                       <h4 className="text-xs uppercase tracking-widest text-brand-cream/50 mb-3">Требования</h4>
-                       <ul className="space-y-2 text-sm text-brand-cream/80">
-                         {rank.requirements.map((req, i) => (
-                           <li key={i} className="flex gap-2">
-                             <span className="text-brand-gold">•</span> {req}
-                           </li>
-                         ))}
-                       </ul>
-                    </div>
-                    <div>
-                       <h4 className="text-xs uppercase tracking-widest text-brand-cream/50 mb-3">Вознаграждение</h4>
-                       <ul className="space-y-2 text-sm font-medium">
-                         {rank.rewards.map((rew, i) => (
-                           <li key={i} className="p-2 bg-brand-gold/5 rounded border-l-2 border-brand-gold text-brand-goldLight">
-                             {rew}
-                           </li>
-                         ))}
-                       </ul>
-                    </div>
-                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        {/* Monthly Confirmation */}
-        <div className="mt-16 max-w-3xl mx-auto p-8 bg-gradient-to-br from-red-900/20 to-brand-dark border border-red-500/20 rounded-2xl">
-           <h3 className="text-xl font-bold text-brand-gold flex items-center gap-2 mb-4">
-             <Flame className="w-5 h-5" /> {C.SECTION_CONFIRMATION.title}
-           </h3>
-           <p className="mb-4">{C.SECTION_CONFIRMATION.desc}</p>
-           <ul className="list-disc list-inside space-y-2 text-brand-cream/70 mb-6">
-              {C.SECTION_CONFIRMATION.list.map((l, i) => <li key={i}>{l}</li>)}
-           </ul>
-           <p className="text-red-300 font-medium">{C.SECTION_CONFIRMATION.footer}</p>
-        </div>
-
-        {/* Why Ranks */}
-        <div className="mt-12 text-center max-w-2xl mx-auto">
-           <h3 className="text-xl font-bold mb-4 flex items-center justify-center gap-2">
-              <Target className="text-brand-blue" /> {C.SECTION_RANKS_REASON.title}
-           </h3>
-           <ul className="text-left space-y-2 inline-block">
-              {C.SECTION_RANKS_REASON.list.map((l, i) => (
-                <li key={i} className="flex gap-2 text-brand-cream/70">
-                  <span className="text-brand-blue">•</span> {l}
-                </li>
-              ))}
-           </ul>
         </div>
       </section>
 
